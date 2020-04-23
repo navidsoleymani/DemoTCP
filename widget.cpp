@@ -49,7 +49,7 @@ void Widget::toggleTcpClientClicked()
         tcpClient->connectToHost(clientIP->text(), static_cast<quint16>(clientPort->text().toUInt()));
         toggleTcpClient->setText("Disconnect from Server");
     }
-    qDebug() << Q_FUNC_INFO << QString(": %1:%2").arg(clientIP->text()).arg(clientPort->text());
+    // qDebug() << Q_FUNC_INFO << QString(": %1:%2").arg(clientIP->text()).arg(clientPort->text());
 }
 
 void Widget::sendDataClicked()
