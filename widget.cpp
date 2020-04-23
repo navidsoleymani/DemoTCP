@@ -57,6 +57,7 @@ void Widget::sendDataClicked()
     if(!tcpClient->isOpen())
         return;
     tcpClient->write(dataInput->text().toUtf8());
+    qDebug() << Q_FUNC_INFO <<": sent data to TCP socket.";
 }
 
 void Widget::newConnection()
